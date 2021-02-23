@@ -1,17 +1,6 @@
-@font-face {
-    font-family: 'raleway-black';
-    src: url('fonts/Raleway/static/Raleway-Black.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'raleway-regular';
-    src: url('fonts/Raleway/static/Raleway-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *  {
-    font-family:'raleway-regular', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'raleway', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 body {
     max-width: 1440px;
@@ -22,6 +11,7 @@ body {
 #blockbody {
     margin: 0 50px;
 }
+
 /* Header */
 
 header {
@@ -35,6 +25,7 @@ header {
     display: flex;
     justify-content: space-between;
     position: fixed;
+    background: white;
 }
 header ul {
     display: flex;
@@ -83,7 +74,9 @@ header span {
     color:#0065FC;
     font-weight: 800;
 }
+
 /* En dessous du header */ 
+
 h1 {
     font-size: 20px;
     font-weight: 900;
@@ -200,4 +193,170 @@ h2 {
     border: 1px solid rgba(139, 139, 139, .3);
     border-radius: 10px;
     margin-right: 5px;
+}
+/* Main */
+main {
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+}
+/* section les plus populaires */ 
+
+#popular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: transparent;
+    border-radius: 10px;
+    background-color: #F2F2F2;
+    width: 420px;
+    padding: 40px;
+}
+#popular a{
+    color: black;
+    text-decoration: none;
+}
+#title1 {
+    display: flex;
+}
+#title1 h3 {
+    font-weight:900;
+    margin-right: 160px;
+}
+#title1 img {
+    width: 20px;
+}
+.proppop {
+    display: flex;
+    align-items: center;
+    height: 145px;
+    width: 345px;
+    border: transparent;
+    border-radius: 20px;
+    margin: 16.5px auto;
+    padding-left: 5px;
+    background-color: white;
+
+}
+.contain_img_popular {
+    position: relative;
+    width: 127px;
+    height: 135px;
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+
+}
+.picroom {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top:-100%; left:0; right: 0; bottom:-100%;
+    margin: auto;
+}
+.picroomtoosmall {
+    width: auto;
+    height: 150%;
+    position: absolute;
+    top:-100%; left:0; right: 0; bottom:-100%;
+    margin: auto;
+}
+.descriptionpop {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 145px;
+    margin-left: 20px;
+}
+.descriptionpop h4 {
+    font-size: 15px;
+    font-weight: 800;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.descriptionpop p {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 45px;
+}
+.ranking {
+    display: flex;
+    width: 12px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+/* Section main */ 
+main {
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    background-color: #F2F2F2;
+    width: 880px;
+    height: 630px;
+    border-radius: 10px;
+}
+#main h3 {
+    margin-left: 40px;
+    margin-top: 40px;
+}
+.section_row {
+    display: flex;
+    flex-direction: row;
+    margin: 0 30px;
+    justify-content: space-between;
+}
+.propmain {
+    width: 245px;
+    height: 200px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column
+}
+h4 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 16px;
+}
+.propmain p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: 16px;
+}
+.contain_img_accomodation{
+    margin: 5px auto 0 auto;
+    position: relative;
+    width: 235px;
+    height: 115px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+.contain_img_accomodation img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top:-100%; left:0; right: 0; bottom:-100%;
+    margin: auto;
+}
+.rankingmain {
+    display: flex;
+    width: 12px;
+    padding-left: 16px;
+    padding-bottom: 10px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+.showmoar{
+    margin-top: 25px;
+    margin-left: 30px;
+    color: black;
+    text-decoration: none;
 }
