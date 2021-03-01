@@ -210,7 +210,6 @@ h2 {
     transition: all .2s;
 }
 #filter input[type="checkbox"] {
-    display: absolute;
     position: absolute;
     opacity: 0;
 }
@@ -237,7 +236,6 @@ h2 {
 /* Main */
 
 main {
-    position: absolute;
     display: flex;
     max-width: 1340px;
     width: 100%;
@@ -429,10 +427,6 @@ h4 {
 #activity {    
     max-width: 1440px;
     justify-content: center;
-    margin: 760px auto 0 auto; /*
-    margin-top: 760px;
-    margin-left: 50px;
-    max-width: 1440px; */
 }
 #activity h3 {
     margin-top: 0px;
@@ -716,26 +710,23 @@ footer a {
     .contain_img_accomodation {
         width: 98%;
     }
-    #activity {
-        position: relative;
-        margin-top: 2150px;
+    #activity { 
+        margin: 800px 0 0 0;
     }
-    /* !!!!! Margin-top 2150px c'est absurde il faut trouver un autre moyen de mettre les éléments à la suite !!!*/
+
+    /* margin top a revoir */
 
     #activity_contain {
         display: flex;
         flex-direction: column; 
-    }
-    #activity a {
-        width: 98%;
-        height: 190px;
-    }
-    #activity a img  {
-        height: 130px ;
+        align-content: center;
+        width: 100%;
     }
     footer {
-        display: none;
+        margin-top: 1200px;
+        display: flex;
+        flex-direction: column;
     }
 }
-
+/* Il faut que je trouve la raison pourquoi les blocks sont décallé et que je sois obligé d'utilisé un margin top ridiculement élevé pour avoir une mise en page correct */ 
 /* a venir version plus aéré ( exemple header a {} + footer a {} deviendra juste a {}) / Media Queries  */ 
