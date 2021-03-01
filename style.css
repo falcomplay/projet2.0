@@ -20,8 +20,10 @@ body {
 }
 
 /* Header */
-
-header {
+#header_responsive {
+    display: none;
+}
+#header_desktop {
     top: 0;
     max-width: 1440px;
     width: 100%;
@@ -95,6 +97,9 @@ header ul li a:hover::before, header ul li a:hover::after{
     max-width: 1340px;
     width: 100%;
 }
+#input_filter, #stick_filter {
+    display: flex;
+}
 h1 {
     font-size: 20px;
     font-weight: 800;
@@ -145,7 +150,6 @@ h1 {
     height: 20px;
 }
 #filter {
-    display: inline-block;
     display: flex;
     align-items: center;
     margin-top: 20px;
@@ -192,6 +196,13 @@ h2 {
     -webkit-tap-highlight-color: transparent;
     transition: all .2s;
 }
+#filter input[type="checkbox"]:hover + label {
+    border: 2px solid #0065FC;
+    background-color: #0065FC;
+    color: #fff;
+    transition: all .2s;
+}
+
 #filter input[type="checkbox"]:checked + label {
     border: 2px solid #0065FC;
     background-color: #0065FC;
@@ -607,6 +618,124 @@ footer ul {
 footer a {
     color: black;
     text-decoration: none;
+}
+
+/* Media queries */ 
+
+@media (max-width: 375px) {
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    header {
+        margin: 0;
+        padding: 0;
+        width: 375px;
+    }
+    #header_desktop {
+        display: none;
+    }
+
+    header li {
+        margin: 0;
+        padding: 0;
+    }
+    #header_responsive {
+        display: flex;
+        flex-direction: column;
+    }
+    #register {
+        display: flex;
+        justify-content: space-between;
+    }
+    header img {
+        margin-left: 20px;
+    }
+    #ancre ul {
+        margin: 0 25px;
+        padding: 0;
+        justify-content: space-between;
+    }
+    header ul li a::before, header ul li a::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        background-color: #0065FC ;
+        will-change: width;
+        transition: width .2s ease-out;
+        position: absolute;
+        top: 30px;
+    }
+    #stripe {
+        margin-top: 10px;
+        border-bottom: 3px #f2f2f2 solid;
+    }
+    #search_filters {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 0 15px;
+        width: 340px;
+    }
+    #search_button span {
+        display: none;
+        background-image: url(#);
+    }
+    #filter {
+        flex-direction:column;
+    }
+    h2 {
+        align-self: start;
+    }
+    #input_filter {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    #popular {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    #main {
+        padding: 0;
+        margin: 0;
+        background: none;
+    }
+    .section_row {
+        display: flex;
+        flex-direction: column;
+    }
+    .propmain {
+        margin: 0 0 15px 10px;
+        width: 95%;
+    }
+    .contain_img_accomodation {
+        width: 98%;
+    }
+    #activity {
+        position: relative;
+        margin-top: 2150px;
+    }
+    /* !!!!! Margin-top 2150px c'est absurde il faut trouver un autre moyen de mettre les éléments à la suite !!!*/
+
+    #activity_contain {
+        display: flex;
+        flex-direction: column; 
+    }
+    #activity a {
+        width: 98%;
+        height: 190px;
+    }
+    #activity a img  {
+        height: 130px ;
+    }
+    footer {
+        display: none;
+    }
 }
 
 /* a venir version plus aéré ( exemple header a {} + footer a {} deviendra juste a {}) / Media Queries  */ 

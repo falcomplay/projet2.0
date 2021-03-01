@@ -12,16 +12,31 @@
             <!-- Header -->
 
     <header>
-        <img src="images/logo/Reservia.svg" alt="logo">
-        <nav>
-            <ul>
-                <li><a href="#iline">Hébergements</a></li>
-                <li><a href="#showmoar">Activités</a></li>                    
-            </ul>
-            <a href="#"><span>S'inscrire</span></a>
-        </nav>
+        <div id="header_desktop">
+            <img src="images/logo/Reservia.svg" alt="logo">
+            <nav>
+                <ul>
+                    <li><a href="#iline">Hébergements</a></li>
+                    <li><a href="#showmoar">Activités</a></li>                    
+                </ul>
+                <a href="#"><span>S'inscrire</span></a>
+            </nav>
+        </div>
+        <div id="header_responsive">
+            <div id="register">
+                <img src="images/logo/Reservia.svg" alt="Logo Reservia"/>
+                <a href="#"><span>S'inscrire</span></a>
+            </div>
+            <div id="ancre">
+                <ul>
+                    <li><a href="#iline">Hébergements</a></li>
+                    <li><a href="#showmoar">Activités</a></li>                    
+                </ul>
+            </div>
+            <div id="stripe"></div>
+        </div>
     </header>
-
+    
             <!-- Recherche et filtres -->
 
     <div id="blockbody">
@@ -33,14 +48,18 @@
                     <img src="images/svg/map-marker-alt-solid.svg" class="map_marker" alt="marker-map">
                 </button>
                 <input id="search_town" placeholder="Marseille, France">
-                <button id="search_button">Rechercher</button>
+                <button id="search_button"><span>Rechercher</span></button>
             </div>
             <div id="filter">
                 <h2>Filtres</h2>
-                <input type="checkbox" id="mycheckbox1"><label for="mycheckbox1"><span class="frame"><img src="images/svg/money-bill-wave-solid.svg" alt="économique"></span>Économique</label>
-                <input type="checkbox" id="mycheckbox2"><label for="mycheckbox2"><span class="frame"><img src="images/svg/child-solid.svg" alt="Familial"></span>Familial</label>
-                <input type="checkbox" id="mycheckbox3"><label for="mycheckbox3"><span class="frame"><img src="images/svg/heart-solid.svg" alt="romance"></span>Romantique</label>
-                <input type="checkbox" id="mycheckbox4"><label for="mycheckbox4"><span class="frame"><img src="images/svg/dog-solid.svg" alt="animal"></span>Animaux autorisés</label>
+                <div id="input_filter">
+                    <div id="stick_filter">
+                        <input type="checkbox" id="mycheckbox1"><label for="mycheckbox1"><span class="frame"><img src="images/svg/money-bill-wave-solid.svg" alt="économique"></span>Économique</label>
+                        <input type="checkbox" id="mycheckbox2"><label for="mycheckbox2"><span class="frame"><img src="images/svg/child-solid.svg" alt="Familial"></span>Familial</label>
+                    </div>
+                    <input type="checkbox" id="mycheckbox3"><label for="mycheckbox3"><span class="frame"><img src="images/svg/heart-solid.svg" alt="romance"></span>Romantique</label>
+                    <input type="checkbox" id="mycheckbox4"><label for="mycheckbox4"><span class="frame"><img src="images/svg/dog-solid.svg" alt="animal"></span>Animaux autorisés</label>
+                </div>
             </div>
             <div id="iline"><div id="framei"><img src="images/svg/info-solid.svg" alt="i"></div>Plus de 500 logements sont disponibles dans cette ville</div>
         </section>
